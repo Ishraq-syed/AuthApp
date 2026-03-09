@@ -8,6 +8,7 @@ const cookieOptions = {
   ),
   httpOnly: true,
   sameSite: "None",
+  secure: false,
   // sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
   // secure: process.env.NODE_ENV === "production",
 };
