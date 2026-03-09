@@ -7,10 +7,8 @@ const cookieOptions = {
     Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 60 * 60 * 1000,
   ),
   httpOnly: true,
-  sameSite: "None",
-  secure: false,
-  // sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
-  // secure: process.env.NODE_ENV === "production",
+  sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
+  secure: process.env.NODE_ENV === "production",
 };
 
 exports.signup = async (req, res) => {
