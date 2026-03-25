@@ -19,6 +19,7 @@ mongoose.connect(DB).then(() => {
 });
 
 const app = express();
+app.set("trust proxy", true);
 // Allow requests from the frontend dev server at localhost:5173
 const corsOptions = {
   origin: function (origin, callback) {
