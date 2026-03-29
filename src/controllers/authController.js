@@ -9,6 +9,7 @@ const cookieOptions = {
   httpOnly: true,
   sameSite: "None",
   secure: true,
+  domain: ".issyed-auth.com",
 };
 
 exports.signup = async (req, res) => {
