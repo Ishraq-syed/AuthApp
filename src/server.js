@@ -25,7 +25,7 @@ const corsOptions = {
   origin: function (origin, callback) {
     // allow requests with no origin (like mobile apps, curl, or server-to-server)
     if (!origin) return callback(null, true);
-    const allowed = ["http://localhost:5173"];
+    const allowed = ["http://localhost:5173", "https://issyed-auth.com"];
     if (allowed.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
